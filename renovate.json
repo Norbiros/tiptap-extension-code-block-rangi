@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:best-practices"],
+  "packageRules": [
+    {
+      "description": "Upgrade the synchronized Vite+ toolchain with vp migrate",
+      "matchPackageNames": ["vite-plus", "@voidzero-dev/vite-plus-core"]
+    },
+    {
+      "description": "Automerge verified GitHub Action digest updates",
+      "matchManagers": ["github-actions"],
+      "automerge": true
+    },
+    {
+      "description": "Group and automerge non-major development updates",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["digest", "patch", "minor"],
+      "groupName": "development dependencies"
+    },
+    {
+      "description": "Review package manager updates manually",
+      "matchPackageNames": ["pnpm"],
+      "automerge": false
+    }
+  ]
+}
