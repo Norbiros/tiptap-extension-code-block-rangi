@@ -217,7 +217,7 @@ importers:
   .:
     devDependencies:
       '@types/node':
-        specifier: ^26.1.1
+        specifier: ^26.2.0
         version: 26.2.0
       bumpp:
         specifier: ^11.1.0
